@@ -1,6 +1,6 @@
 {
   "name": "iso-639-1-plus",
-  "version": "2.1.9",
+  "version": "3.0.0",
   "description": "Native language names for all ISO-639-1 codes plus some common IETF BCP 47 language tags",
   "main": "build/index.js",
   "module": "src/index.js",
@@ -24,7 +24,10 @@
     "locale code"
   ],
   "author": "Justin Emery",
-  "contributors": ["Justin Emery", "meikidd <meikidd@gmail.com>"],
+  "contributors": [
+    "Justin Emery",
+    "meikidd <meikidd@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/polarisation/iso-639-1-plus/issues"
