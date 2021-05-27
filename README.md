@@ -3,14 +3,15 @@
 [![Build Status][travis-image]][travis-url]
 [![Download Count][download-url]][npm-url]
 
-[travis-image]: https://travis-ci.org/meikidd/iso-639-1.svg?branch=master
-[travis-url]: https://travis-ci.org/meikidd/iso-639-1
-[npm-image]: https://img.shields.io/npm/v/iso-639-1.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/iso-639-1
-[download-url]: https://img.shields.io/npm/dt/iso-639-1.svg?style=flat-square
+[travis-image]: https://travis-ci.org/polarisation/iso-639-1-plus.svg?branch=master
+[travis-url]: https://travis-ci.org/polarisation/iso-639-1-plus
+[npm-image]: https://img.shields.io/npm/v/iso-639-1-plus.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/iso-639-1-plus
+[download-url]: https://img.shields.io/npm/dt/iso-639-1-plus.svg?style=flat-square
 
+Simple interface for [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 2-letter language codes and common [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag)
 
-Simple interface for [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) language codes
+Forked from [iso-639-1](https://github.com/meikidd/iso-639-1) and extended with a some common language subtags for regional variations (eg. `en-GB`, `pt-BR`, `zh-Hans`). The intention is not to provide a definitive list, but a subset of commonly used language tags / locales.
 
 ## Installation
 
@@ -24,14 +25,14 @@ npm install iso-639-1
 
 ```javascript
 const ISO6391 = require('iso-639-1');
-console.log(ISO6391.getName('en')); // 'English'
+console.log(ISO6391.getName('en-GB')); // 'English (United Kingdom)'
 ```
 
 ### ES Module
 
 ```javascript
 import ISO6391 from 'iso-639-1';
-console.log(ISO6391.getName('en')); // 'English'
+console.log(ISO6391.getName('en-GB')); // 'English (United Kingdom)'
 ```
 
 ### Browsers
@@ -45,7 +46,7 @@ HTML
 Visit global variable ISO6391 in js
 
 ```javascript
-console.log(ISO6391.getName('en')); // 'English'
+console.log(ISO6391.getName('en-GB')); // 'English (United Kingdom)'
 ```
 
 ## Methods
@@ -54,12 +55,12 @@ console.log(ISO6391.getName('en')); // 'English'
   - @param code {string}
   - @return {string}
 
-Lookup language english name by code
+Lookup language English name by code
 
 ### getAllNames()
   - @return {array}
 
-Get array of all language english names
+Get array of all language English names
 
 ### getNativeName(code)
   - @param code {string}
@@ -77,7 +78,7 @@ Get array of all language native names
   - @param name {string}
   - @return {string}
 
-Lookup code by english name or native name
+Lookup code by English name or native name
 
 ### getAllCodes()
   - @return {array}

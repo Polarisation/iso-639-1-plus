@@ -75,6 +75,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/babel-runtime/core-js/object/assign.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__("./node_modules/core-js/library/fn/object/assign.js"), __esModule: true };
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/core-js/object/define-property.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -143,6 +150,45 @@ exports.default = function () {
     return Constructor;
   };
 }();
+
+/***/ }),
+
+/***/ "./node_modules/babel-runtime/helpers/extends.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _assign = __webpack_require__("./node_modules/babel-runtime/core-js/object/assign.js");
+
+var _assign2 = _interopRequireDefault(_assign);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _assign2.default || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/object/assign.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("./node_modules/core-js/library/modules/es6.object.assign.js");
+module.exports = __webpack_require__("./node_modules/core-js/library/modules/_core.js").Object.assign;
+
 
 /***/ }),
 
@@ -479,6 +525,48 @@ module.exports = function (it) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/library/modules/_object-assign.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 19.1.2.1 Object.assign(target, source, ...)
+var getKeys = __webpack_require__("./node_modules/core-js/library/modules/_object-keys.js");
+var gOPS = __webpack_require__("./node_modules/core-js/library/modules/_object-gops.js");
+var pIE = __webpack_require__("./node_modules/core-js/library/modules/_object-pie.js");
+var toObject = __webpack_require__("./node_modules/core-js/library/modules/_to-object.js");
+var IObject = __webpack_require__("./node_modules/core-js/library/modules/_iobject.js");
+var $assign = Object.assign;
+
+// should work with symbols and should have deterministic property order (V8 bug)
+module.exports = !$assign || __webpack_require__("./node_modules/core-js/library/modules/_fails.js")(function () {
+  var A = {};
+  var B = {};
+  // eslint-disable-next-line no-undef
+  var S = Symbol();
+  var K = 'abcdefghijklmnopqrst';
+  A[S] = 7;
+  K.split('').forEach(function (k) { B[k] = k; });
+  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+}) ? function assign(target, source) { // eslint-disable-line no-unused-vars
+  var T = toObject(target);
+  var aLen = arguments.length;
+  var index = 1;
+  var getSymbols = gOPS.f;
+  var isEnum = pIE.f;
+  while (aLen > index) {
+    var S = IObject(arguments[index++]);
+    var keys = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S);
+    var length = keys.length;
+    var j = 0;
+    var key;
+    while (length > j) if (isEnum.call(S, key = keys[j++])) T[key] = S[key];
+  } return T;
+} : $assign;
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/library/modules/_object-dp.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -498,6 +586,14 @@ exports.f = __webpack_require__("./node_modules/core-js/library/modules/_descrip
   if ('value' in Attributes) O[P] = Attributes.value;
   return O;
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/_object-gops.js":
+/***/ (function(module, exports) {
+
+exports.f = Object.getOwnPropertySymbols;
 
 
 /***/ }),
@@ -724,6 +820,17 @@ module.exports = function (key) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/library/modules/es6.object.assign.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.1 Object.assign(target, source)
+var $export = __webpack_require__("./node_modules/core-js/library/modules/_export.js");
+
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__("./node_modules/core-js/library/modules/_object-assign.js") });
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/library/modules/es6.object.define-property.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -763,6 +870,62 @@ $export($export.S, 'Object', {
   }
 });
 
+
+/***/ }),
+
+/***/ "./src/additional.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var ADDITIONAL_LANGUAGES = {
+  'en-GB': {
+    name: 'English (United Kingdom)',
+    nativeName: 'English (United Kingdom)'
+  },
+  'en-AU': {
+    name: 'English (Australia)'
+  },
+  'en-CA': {
+    name: 'English (Canada)',
+    nativeName: 'English (Canada)'
+  },
+  'es-ES': {
+    name: 'Spanish (Spain)',
+    nativeName: 'español (España)'
+  },
+  'es-419': {
+    name: 'Spanish (Latin America)',
+    nativeName: 'español (Latinoamérica)'
+  },
+  'es-MX': {
+    name: 'Spanish (Mexico)',
+    nativeName: 'español (México)'
+  },
+  'fr-CA': {
+    name: 'French (Canada)',
+    nativeName: 'français (Canada)'
+  },
+  'pt-BR': {
+    name: 'Portuguese (Brazil)',
+    nativeName: 'português (Brasil)'
+  },
+  'zh-Hans': {
+    name: 'Chinese (Simplified)',
+    nativeName: '中文（简体）'
+  },
+  'zh-Hant': {
+    name: 'Chinese (Traditional)',
+    nativeName: '中文（繁體）'
+  }
+};
+
+exports.default = ADDITIONAL_LANGUAGES;
+module.exports = exports['default'];
 
 /***/ }),
 
@@ -930,11 +1093,11 @@ var LANGUAGES_LIST = {
   },
   eo: {
     name: 'Esperanto',
-    nativeName: 'Esperanto'
+    nativeName: 'esperanto'
   },
   es: {
     name: 'Spanish',
-    nativeName: 'Español'
+    nativeName: 'español'
   },
   et: {
     name: 'Estonian',
@@ -966,7 +1129,7 @@ var LANGUAGES_LIST = {
   },
   fr: {
     name: 'French',
-    nativeName: 'Français'
+    nativeName: 'français'
   },
   fy: {
     name: 'Western Frisian',
@@ -1066,7 +1229,7 @@ var LANGUAGES_LIST = {
   },
   it: {
     name: 'Italian',
-    nativeName: 'Italiano'
+    nativeName: 'italiano'
   },
   iu: {
     name: 'Inuktitut',
@@ -1298,7 +1461,7 @@ var LANGUAGES_LIST = {
   },
   pt: {
     name: 'Portuguese',
-    nativeName: 'Português'
+    nativeName: 'português'
   },
   qu: {
     name: 'Quechua',
@@ -1545,11 +1708,21 @@ var _createClass2 = __webpack_require__("./node_modules/babel-runtime/helpers/cr
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
+var _extends2 = __webpack_require__("./node_modules/babel-runtime/helpers/extends.js");
+
+var _extends3 = _interopRequireDefault(_extends2);
+
 var _data = __webpack_require__("./src/data.js");
 
 var _data2 = _interopRequireDefault(_data);
 
+var _additional = __webpack_require__("./src/additional.js");
+
+var _additional2 = _interopRequireDefault(_additional);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var LANGUAGES_LIST = (0, _extends3.default)({}, _data2.default, _additional2.default);
 
 var ISO6391 = function () {
   function ISO6391() {
@@ -1572,32 +1745,32 @@ var ISO6391 = function () {
   }, {
     key: 'getName',
     value: function getName(code) {
-      return ISO6391.validate(code) ? _data2.default[code].name : '';
+      return ISO6391.validate(code) ? LANGUAGES_LIST[code].name : '';
     }
   }, {
     key: 'getAllNames',
     value: function getAllNames() {
-      return (0, _values2.default)(_data2.default).map(function (l) {
+      return (0, _values2.default)(LANGUAGES_LIST).map(function (l) {
         return l.name;
       });
     }
   }, {
     key: 'getNativeName',
     value: function getNativeName(code) {
-      return ISO6391.validate(code) ? _data2.default[code].nativeName : '';
+      return ISO6391.validate(code) ? LANGUAGES_LIST[code].nativeName : '';
     }
   }, {
     key: 'getAllNativeNames',
     value: function getAllNativeNames() {
-      return (0, _values2.default)(_data2.default).map(function (l) {
+      return (0, _values2.default)(LANGUAGES_LIST).map(function (l) {
         return l.nativeName;
       });
     }
   }, {
     key: 'getCode',
     value: function getCode(name) {
-      var code = (0, _keys2.default)(_data2.default).find(function (code) {
-        var language = _data2.default[code];
+      var code = (0, _keys2.default)(LANGUAGES_LIST).find(function (code) {
+        var language = LANGUAGES_LIST[code];
 
         return language.name.toLowerCase() === name.toLowerCase() || language.nativeName.toLowerCase() === name.toLowerCase();
       });
@@ -1606,12 +1779,12 @@ var ISO6391 = function () {
   }, {
     key: 'getAllCodes',
     value: function getAllCodes() {
-      return (0, _keys2.default)(_data2.default);
+      return (0, _keys2.default)(LANGUAGES_LIST);
     }
   }, {
     key: 'validate',
     value: function validate(code) {
-      return _data2.default.hasOwnProperty(code);
+      return LANGUAGES_LIST.hasOwnProperty(code);
     }
   }]);
   return ISO6391;

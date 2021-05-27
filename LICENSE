@@ -1,6 +1,10 @@
 This software is licensed under the MIT License.
 
-Copyright(c) by Mei Qingguang
+Substantial portions from https://github.com/meikidd/iso-639-1 (also available under MIT license).
+Copyright(c) 2021 by Mei Qingguang
+
+Additional substantial portions of this codebase.
+Copyright(c) 2021 Justin Emery
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

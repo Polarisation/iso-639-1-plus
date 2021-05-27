@@ -153,11 +153,11 @@ const LANGUAGES_LIST = {
   },
   eo: {
     name: 'Esperanto',
-    nativeName: 'Esperanto',
+    nativeName: 'esperanto',
   },
   es: {
     name: 'Spanish',
-    nativeName: 'Español',
+    nativeName: 'español',
   },
   et: {
     name: 'Estonian',
@@ -189,7 +189,7 @@ const LANGUAGES_LIST = {
   },
   fr: {
     name: 'French',
-    nativeName: 'Français',
+    nativeName: 'français',
   },
   fy: {
     name: 'Western Frisian',
@@ -289,7 +289,7 @@ const LANGUAGES_LIST = {
   },
   it: {
     name: 'Italian',
-    nativeName: 'Italiano',
+    nativeName: 'italiano',
   },
   iu: {
     name: 'Inuktitut',
@@ -521,7 +521,7 @@ const LANGUAGES_LIST = {
   },
   pt: {
     name: 'Portuguese',
-    nativeName: 'Português',
+    nativeName: 'português',
   },
   qu: {
     name: 'Quechua',

@@ -1,4 +1,7 @@
-import LANGUAGES_LIST from './data';
+import TWO_LETTER_LANGUAGES from './data';
+import ADDITIONAL_LANGUAGES from './additional';
+
+const LANGUAGES_LIST = { ...TWO_LETTER_LANGUAGES, ...ADDITIONAL_LANGUAGES };
 
 export default class ISO6391 {
   static getLanguages(codes = []) {
