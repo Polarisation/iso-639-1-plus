@@ -1,4 +1,4 @@
-# ISO-639-1
+# ISO-639-1-plus
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Download Count][download-url]][npm-url]
@@ -9,14 +9,14 @@
 [npm-url]: https://npmjs.org/package/iso-639-1-plus
 [download-url]: https://img.shields.io/npm/dt/iso-639-1-plus.svg?style=flat-square
 
-Simple interface for [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 2-letter language codes and common [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag)
+Simple interface for [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 2-letter language codes and common [IETF BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag).
 
 Forked from [iso-639-1](https://github.com/meikidd/iso-639-1) and extended with a some common language subtags for regional variations (eg. `en-GB`, `pt-BR`, `zh-Hans`). The intention is not to provide a definitive list, but a subset of commonly used language tags / locales.
 
 ## Installation
 
 ```
-npm install iso-639-1
+npm install iso-639-1-plus
 ```
 
 ## Usage
@@ -24,14 +24,14 @@ npm install iso-639-1
 ### Node.js
 
 ```javascript
-const ISO6391 = require('iso-639-1');
+const ISO6391 = require('iso-639-1-plus');
 console.log(ISO6391.getName('en-GB')); // 'English (United Kingdom)'
 ```
 
 ### ES Module
 
 ```javascript
-import ISO6391 from 'iso-639-1';
+import ISO6391 from 'iso-639-1-plus';
 console.log(ISO6391.getName('en-GB')); // 'English (United Kingdom)'
 ```
 
@@ -40,7 +40,7 @@ console.log(ISO6391.getName('en-GB')); // 'English (United Kingdom)'
 HTML
 
 ```html
-<script type="text/javascript" src="./node_modules/iso-639-1/build/index.js"></script>
+<script type="text/javascript" src="./node_modules/iso-639-1-plus/build/index.js"></script>
 ```
 
 Visit global variable ISO6391 in js
@@ -100,7 +100,7 @@ Get the array of the language objects by the given codes
 ## Example
 
 ```
-const ISO6391 = require('iso-639-1')
+const ISO6391 = require('iso-639-1-plus')
 
 console.log(ISO6391.getName('zh')) // 'Chinese'
 console.log(ISO6391.getNativeName('zh')) // '中文'
