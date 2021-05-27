@@ -1,4 +1,4 @@
-declare module "iso-639-1" {
+declare module "iso-639-1-plus" {
   interface ISO6391 {
     getName: (code: string) => string;
     getAllNames: () => Array<string>;
