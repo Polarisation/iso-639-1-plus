@@ -24,6 +24,14 @@
     "locale",
     "locale code"
   ],
+  "files": [
+    "src",
+    "build",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "index.d.ts"
+  ],
   "author": "Justin Emery",
   "contributors": [
     "Justin Emery",
