@@ -5,6 +5,7 @@ const ADDITIONAL_LANGUAGES = {
   },
   'en-AU': {
     name: 'English (Australia)',
+    nativeName: 'English (Australia)',
   },
   'en-CA': {
     name: 'English (Canada)',
