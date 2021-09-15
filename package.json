@@ -1,6 +1,6 @@
 {
   "name": "iso-639-1-plus",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Native language names for all ISO-639-1 codes plus some common IETF BCP 47 language tags",
   "main": "build/index.js",
   "module": "src/index.js",
