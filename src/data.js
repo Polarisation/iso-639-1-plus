@@ -29,7 +29,7 @@ const LANGUAGES_LIST = {
   },
   ar: {
     name: 'Arabic',
-    nativeName: 'اللغة العربية',
+    nativeName: 'اَلْعَرَبِيَّةُ',
   },
   as: {
     name: 'Assamese',
@@ -58,10 +58,6 @@ const LANGUAGES_LIST = {
   bg: {
     name: 'Bulgarian',
     nativeName: 'български език',
-  },
-  bh: {
-    name: 'Bihari',
-    nativeName: 'भोजपुरी',
   },
   bi: {
     name: 'Bislama',
@@ -133,7 +129,7 @@ const LANGUAGES_LIST = {
   },
   dv: {
     name: 'Divehi',
-    nativeName: 'Dhivehi',
+    nativeName: 'ދިވެހި',
   },
   dz: {
     name: 'Dzongkha',
@@ -153,11 +149,11 @@ const LANGUAGES_LIST = {
   },
   eo: {
     name: 'Esperanto',
-    nativeName: 'esperanto',
+    nativeName: 'Esperanto',
   },
   es: {
     name: 'Spanish',
-    nativeName: 'español',
+    nativeName: 'Español',
   },
   et: {
     name: 'Estonian',
@@ -181,7 +177,7 @@ const LANGUAGES_LIST = {
   },
   fj: {
     name: 'Fijian',
-    nativeName: 'Vakaviti',
+    nativeName: 'vosa Vakaviti',
   },
   fo: {
     name: 'Faroese',
@@ -189,7 +185,7 @@ const LANGUAGES_LIST = {
   },
   fr: {
     name: 'French',
-    nativeName: 'français',
+    nativeName: 'Français',
   },
   fy: {
     name: 'Western Frisian',
@@ -289,7 +285,7 @@ const LANGUAGES_LIST = {
   },
   it: {
     name: 'Italian',
-    nativeName: 'italiano',
+    nativeName: 'Italiano',
   },
   iu: {
     name: 'Inuktitut',
@@ -385,7 +381,7 @@ const LANGUAGES_LIST = {
   },
   lo: {
     name: 'Lao',
-    nativeName: 'ພາສາ',
+    nativeName: 'ພາສາລາວ',
   },
   lt: {
     name: 'Lithuanian',
@@ -393,7 +389,7 @@ const LANGUAGES_LIST = {
   },
   lu: {
     name: 'Luba-Katanga',
-    nativeName: 'Tshiluba',
+    nativeName: 'Kiluba',
   },
   lv: {
     name: 'Latvian',
@@ -429,7 +425,7 @@ const LANGUAGES_LIST = {
   },
   ms: {
     name: 'Malay',
-    nativeName: 'Bahasa Malaysia',
+    nativeName: 'Bahasa Melayu',
   },
   mt: {
     name: 'Maltese',
@@ -441,7 +437,7 @@ const LANGUAGES_LIST = {
   },
   na: {
     name: 'Nauru',
-    nativeName: 'Ekakairũ Naoero',
+    nativeName: 'Dorerin Naoero',
   },
   nb: {
     name: 'Norwegian Bokmål',
@@ -513,7 +509,7 @@ const LANGUAGES_LIST = {
   },
   pl: {
     name: 'Polish',
-    nativeName: 'język polski',
+    nativeName: 'Polski',
   },
   ps: {
     name: 'Pashto',
@@ -521,7 +517,7 @@ const LANGUAGES_LIST = {
   },
   pt: {
     name: 'Portuguese',
-    nativeName: 'português',
+    nativeName: 'Português',
   },
   qu: {
     name: 'Quechua',
@@ -577,7 +573,7 @@ const LANGUAGES_LIST = {
   },
   sl: {
     name: 'Slovenian',
-    nativeName: 'slovenski jezik',
+    nativeName: 'slovenščina',
   },
   sm: {
     name: 'Samoan',
@@ -641,7 +637,7 @@ const LANGUAGES_LIST = {
   },
   tk: {
     name: 'Turkmen',
-    nativeName: 'Türkmen',
+    nativeName: 'Türkmençe',
   },
   tl: {
     name: 'Tagalog',

@@ -1,5 +1,9 @@
 # iso-639-1-plus Changelog
 
+## v3.0.4
+
+- Update to latest language names from iso-639-1
+
 ## v3.0 - Forked from iso-639-1
 - Add additional language variations not represented in iso-639-1, eg. en-GB, es-MX, pt-BR, zh-Hans
 - Lowercased a few language names as appropriate in the native language.
