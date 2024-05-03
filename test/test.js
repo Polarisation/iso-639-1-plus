@@ -5,13 +5,16 @@ describe('getName()', function() {
   it('en', function() {
     assert.equal(ISO6391.getName('en'), 'English');
   });
-  it.only('en', function() {
-    assert.equal(ISO6391.getName('en-GB'), 'English (United Kingdom)');
+  it('en-GB', function() {
+    assert.equal(ISO6391.getName('en-GB'), 'English (UK)');
+  });
+  it('en-US', function() {
+    assert.equal(ISO6391.getName('en-US'), 'English (US)');
   });
   it('zh', function() {
     assert.equal(ISO6391.getName('zh'), 'Chinese');
   });
-  it('zh', function() {
+  it('zh-Hans', function() {
     assert.equal(ISO6391.getName('zh-Hans'), 'Chinese (Simplified)');
   });
   it('xx', function() {
@@ -26,11 +29,20 @@ describe('getNativeName()', function() {
   it('en', function() {
     assert.equal(ISO6391.getNativeName('en'), 'English');
   });
-  it('en', function() {
-    assert.equal(ISO6391.getNativeName('en-GB'), 'English (United Kingdom)');
+  it('en-GB', function() {
+    assert.equal(ISO6391.getNativeName('en-GB'), 'English (UK)');
+  });
+  it('en-US', function() {
+    assert.equal(ISO6391.getNativeName('en-US'), 'English (US)');
   });
   it('zh', function() {
     assert.equal(ISO6391.getNativeName('zh'), '中文');
+  });
+  it('pt', function() {
+    assert.equal(ISO6391.getNativeName('pt'), 'Português');
+  });
+  it('pt-BR', function() {
+    assert.equal(ISO6391.getNativeName('pt-BR'), 'Português (Brasil)');
   });
   it('zh-Hans', function() {
     assert.equal(ISO6391.getNativeName('zh-Hans'), '中文（简体）');
@@ -48,13 +60,16 @@ describe('getCode()', function() {
     assert.equal(ISO6391.getCode('English'), 'en');
   });
   it('English (UK)', function() {
-    assert.equal(ISO6391.getCode('English (United Kingdom)'), 'en-GB');
+    assert.equal(ISO6391.getCode('English (UK)'), 'en-GB');
+  });
+  it('English (US)', function() {
+    assert.equal(ISO6391.getCode('English (US)'), 'en-US');
   });
   it('Chinese', function() {
     assert.equal(ISO6391.getCode('Chinese'), 'zh');
   });
   it('Chinese (Simplified)', function() {
-    assert.equal(ISO6391.getCode('Chinese (Simplified'), 'zh-Hans');
+    assert.equal(ISO6391.getCode('Chinese (Simplified)'), 'zh-Hans');
   });
   it('中文', function() {
     assert.equal(ISO6391.getCode('中文'), 'zh');

@@ -25,14 +25,14 @@ npm install iso-639-1-plus
 
 ```javascript
 const ISO6391 = require('iso-639-1-plus');
-console.log(ISO6391.getName('en-GB')); // 'English (United Kingdom)'
+console.log(ISO6391.getName('en-GB')); // 'English (UK)'
 ```
 
 ### ES Module
 
 ```javascript
 import ISO6391 from 'iso-639-1-plus';
-console.log(ISO6391.getName('en-GB')); // 'English (United Kingdom)'
+console.log(ISO6391.getName('en-GB')); // 'English (UK)'
 ```
 
 ### Browsers
@@ -46,7 +46,7 @@ HTML
 Visit global variable ISO6391 in js
 
 ```javascript
-console.log(ISO6391.getName('en-GB')); // 'English (United Kingdom)'
+console.log(ISO6391.getName('en-GB')); // 'English (UK)'
 ```
 
 ## Methods

@@ -1,7 +1,7 @@
 const ADDITIONAL_LANGUAGES = {
   'en-GB': {
-    name: 'English (United Kingdom)',
-    nativeName: 'English (United Kingdom)',
+    name: 'English (UK)',
+    nativeName: 'English (UK)',
   },
   'en-AU': {
     name: 'English (Australia)',
@@ -13,23 +13,32 @@ const ADDITIONAL_LANGUAGES = {
   },
   'es-ES': {
     name: 'Spanish (Spain)',
-    nativeName: 'español (España)',
+    nativeName: 'Español (España)',
+  },
+  'en-US': {
+    name: 'English (US)',
+    nativeName: 'English (US)',
   },
   'es-419': {
     name: 'Spanish (Latin America)',
-    nativeName: 'español (Latinoamérica)',
+    nativeName: 'Español (Latinoamérica)',
   },
   'es-MX': {
     name: 'Spanish (Mexico)',
-    nativeName: 'español (México)'
+    nativeName: 'Español (México)'
   },
   'fr-CA': {
     name: 'French (Canada)',
-    nativeName: 'français (Canada)'
+    nativeName: 'Français (Canada)'
+  },
+  // Older language code for Hebrew (now 'he') - still used by some platforms
+  iw: {
+    name: 'Hebrew',
+    nativeName: 'עברית',
   },
   'pt-BR': {
     name: 'Portuguese (Brazil)',
-    nativeName: 'português (Brasil)',
+    nativeName: 'Português (Brasil)',
   },
   'zh-Hans': {
     name: 'Chinese (Simplified)',

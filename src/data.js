@@ -121,7 +121,7 @@ const LANGUAGES_LIST = {
   },
   da: {
     name: 'Danish',
-    nativeName: 'dansk',
+    nativeName: 'Dansk',
   },
   de: {
     name: 'German',
@@ -181,7 +181,7 @@ const LANGUAGES_LIST = {
   },
   fo: {
     name: 'Faroese',
-    nativeName: 'føroyskt',
+    nativeName: 'Føroyskt',
   },
   fr: {
     name: 'French',

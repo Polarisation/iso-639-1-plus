@@ -1,5 +1,12 @@
 # iso-639-1-plus Changelog
 
+## v3.0.5
+
+- Add "English (US)"
+- Update "English (United Kingdom)" to "English (UK)"
+- Add Hebrew under code `iw` as this is the older code but still in widespread use. It is also available under `he` (the current correct code).
+- Update to latest language names from iso-639-1
+
 ## v3.0.4
 
 - Update to latest language names from iso-639-1
